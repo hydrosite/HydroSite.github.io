@@ -34,7 +34,7 @@ li {
     margin: 0 10px;
 }
 
-.button, .link-button {
+.button {
     text-decoration: none;
     font-size: 1.2em;
     padding: 10px 20px;
@@ -42,11 +42,9 @@ li {
     background-color: red;
     border-radius: 5px;
     transition: all 0.3s ease;
-    display: inline-block;
-    margin: 10px;
 }
 
-.button:hover, .link-button:hover {
+.button:hover {
     background-color: #fff;
     color: red;
     transform: scale(1.1);
@@ -58,6 +56,17 @@ section {
     text-align: center;
 }
 
+.full-text {
+    padding: 20px;
+    text-align: left;
+    background-color: #333;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px red;
+    white-space: pre-wrap; /* Preserve white space and line breaks */
+}
+
 footer {
     text-align: center;
     padding: 10px;
@@ -66,4 +75,13 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
+}
+
+.Text {
+    color: red;
+    text-decoration: none; /* Optional: Removes underline */
+}
+
+.Text:hover {
+    color: darkred; /* Optional: Darker red on hover */
 }
