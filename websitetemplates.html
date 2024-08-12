@@ -1,4 +1,51 @@
-<section id="templates">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Templates - Hydro Hub</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .screenshot {
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .screenshot:hover {
+            transform: scale(1.05);
+        }
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+        .lightbox img {
+            max-width: 90%;
+            max-height: 80%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hydro Site</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html" class="button">Home</a></li>
+            <li><a href="links.html" class="button">Links</a></li>
+            <li><a href="howtoroblox.html" class="button">How To Hack/Exploit On Roblox</a></li>
+            <li><a href="websitetemplates.html" class="button">Website Templates</a></li>
+            <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+        </ul>
+    </nav>
+    <section id="templates">
     <h2>Website Templates</h2>
     <div class="templates-container">
         <div class="template">
@@ -28,3 +75,23 @@
         </div>
     </div>
 </section>
+    <footer>
+        <p>&copy; 2024 Hydro Hub. All rights reserved.</p>
+    </footer>
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-image" src="" alt="Enlarged Screenshot">
+    </div>
+    <script>
+        function openLightbox(img) {
+            var lightbox = document.getElementById('lightbox');
+            var lightboxImage = document.getElementById('lightbox-image');
+            lightboxImage.src = img.src;
+            lightbox.style.display = 'flex';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
